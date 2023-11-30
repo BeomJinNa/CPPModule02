@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Fixed.hpp"
 
+const int	Fixed::mFractional = 8;
+
 Fixed::Fixed(void)
 	:mValue(0)
 {

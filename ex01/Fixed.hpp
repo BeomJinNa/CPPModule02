@@ -1,3 +1,5 @@
+#include <iostream>
+
 class Fixed
 {
 	public:
@@ -5,9 +7,16 @@ class Fixed
 		Fixed(const Fixed& source);
 		Fixed&	operator=(const Fixed& source);
 		~Fixed(void);
+		Fixed(const int number);
+		Fixed(const float fnumber);
 		int		getRawBits(void) const;
 		void	setRawBits(int const value);
+		float	toFloat(void) const;
+		int		toInt(void) const;
 	private:
 		int					mValue;
 		static const int	mFractional;
+		static const float	mPow;
 };
+
+std::ostream&	operator<<(std::ostream& out, const Fixed &self);
