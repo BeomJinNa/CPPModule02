@@ -4,11 +4,11 @@ class Fixed
 {
 	public:
 		Fixed(void);
+		Fixed(const int number);
+		Fixed(const float fnumber);
 		Fixed(const Fixed& source);
 		Fixed&	operator=(const Fixed& source);
 		~Fixed(void);
-		Fixed(const int number);
-		Fixed(const float fnumber);
 		int		getRawBits(void) const;
 		void	setRawBits(int const value);
 		float	toFloat(void) const;
