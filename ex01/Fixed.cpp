@@ -3,7 +3,8 @@
 #include "Fixed.hpp"
 
 const int	Fixed::mFractional = 8;
-const float	Fixed::mPow = static_cast<float>(1 << Fixed::mFractional);
+const int	Fixed::mPowi = 1 << Fixed::mFractional;
+const float	Fixed::mPow = static_cast<float>(mPowi);
 
 Fixed::Fixed(void)
 	:mValue(0)
@@ -12,7 +13,7 @@ Fixed::Fixed(void)
 }
 
 Fixed::Fixed(const int number)
-	:mValue(number * mPow)
+	:mValue(number * mPowi)
 {
 	std::cout << "Int constructor called" << std::endl;
 }

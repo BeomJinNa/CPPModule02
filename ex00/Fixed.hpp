@@ -1,3 +1,7 @@
+#pragma once
+#ifndef FIXED_HPP
+# define FIXED_HPP
+
 class Fixed
 {
 	public:
@@ -11,3 +15,4 @@ class Fixed
 		int					mValue;
 		static const int	mFractional;
 };
+#endif

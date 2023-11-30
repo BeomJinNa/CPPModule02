@@ -1,4 +1,8 @@
-#include <iostream>
+#pragma once
+#ifndef FIXED_HPP
+# define FIXED_HPP
+
+# include <iostream>
 
 class Fixed
 {
@@ -16,7 +20,9 @@ class Fixed
 	private:
 		int					mValue;
 		static const int	mFractional;
+		static const int	mPowi;
 		static const float	mPow;
 };
 
 std::ostream&	operator<<(std::ostream& out, const Fixed &self);
+#endif

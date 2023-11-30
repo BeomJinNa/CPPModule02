@@ -11,7 +11,7 @@ Fixed::Fixed(void) :mValue(0)
 }
 
 Fixed::Fixed(const int number)
-	:mValue(number * mPow)
+	:mValue(number * mPowi)
 {
 }
 
@@ -45,7 +45,6 @@ bool	Fixed::operator>(const Fixed& source) const
 {
 	return (this->getRawBits() > source.getRawBits());
 }
-
 bool	Fixed::operator<(const Fixed& source) const
 {
 	return (this->getRawBits() < source.getRawBits());
